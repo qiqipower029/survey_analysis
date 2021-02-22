@@ -16,5 +16,29 @@ library(tidyverse)
 ```{r data import}
 # Import data
 survey = readxl::read_excel("./data/WIM COVID 19 Data.xlsx")
+survey = survey[-1,]
+```
+
+## Q1
+```{r Q1}
+survey$Q1 = as.numeric(survey$Q1)
+wilcox.test(survey$Q1, mu = 1)
+```
+
+## Q2
+```{r Q2}
+survey$Q2 = as.numeric(survey$Q2)
+wilcox.test(survey$Q2, mu = 1)
+```
+
+## Q4
+```{r Q4}
+survey$Q4 = as.numeric(survey$Q4)
+wilcox.test(survey$Q4, mu = 1)
+```
+
+## Q7
+```{r Q7}
+survey$Q7 = as.numeric(survey$Q7)
 ```
 
