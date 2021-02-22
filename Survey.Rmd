@@ -1,0 +1,20 @@
+---
+title: "Survey Analysis"
+author: "Jieqi Tu"
+date: "2/21/2021"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Import data
+```{r data import}
+# Import data
+survey = readxl::read_excel("./data/WIM COVID 19 Data.xlsx")
+```
+
