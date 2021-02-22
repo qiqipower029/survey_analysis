@@ -40,5 +40,56 @@ wilcox.test(survey$Q4, mu = 1)
 ## Q7
 ```{r Q7}
 survey$Q7 = as.numeric(survey$Q7)
+wilcox.test(survey$Q7, mu = 1)
+```
+
+## Q8
+```{r Q8}
+survey$Q8 = as.numeric(survey$Q8)
+wilcox.test(survey$Q8, mu = 1)
+```
+
+## Q9
+```{r Q9}
+Q9 = survey$Q9 %>% as.numeric()
+Q9 = Q9[!is.na(Q9)]
+
+wilcox.test(Q9, mu = 1)
+```
+
+## Q10
+```{r Q10}
+survey$Q10 = as.numeric(survey$Q10)
+wilcox.test(survey$Q10, mu = 1)
+```
+
+## Q16 
+```{r Q16}
+survey$Q16 = as.numeric(survey$Q16)
+Q16 = survey$Q16[!is.na(survey$Q16)]
+survey$Q17 = as.numeric(survey$Q17)
+Q17 = survey$Q17[!is.na(survey$Q17)]
+wilcox.test(Q16, Q17)
+Q1617.compare = data.frame(
+  Q16,
+  Q17
+)
+Q1617.compare %>% 
+  ggplot(aes(x = Q16)) + geom_histogram() + theme_bw() + labs(
+    x = "Level of Stress Prior to the COVID19 Pandemic",
+    y = "Count"
+  )
+Q1617.compare %>% 
+  ggplot(aes(x = Q17)) + geom_histogram() + theme_bw() + labs(
+    x = "Current Level of Stress",
+    y = "Count"
+  )
+```
+
+
+## Q18
+```{r Q18}
+survey$Q18 = as.numeric(survey$Q18)
+wilcox.test(survey$Q10, mu = 1)
 ```
 
