@@ -93,3 +93,20 @@ survey$Q18 = as.numeric(survey$Q18)
 wilcox.test(survey$Q10, mu = 1)
 ```
 
+## Q19
+```{r Q19}
+survey$Q19 = as.numeric(survey$Q19)
+wilcox.test(survey$Q19, mu = 1)
+```
+
+## Q20
+```{r Q20}
+survey$Q20 = as.numeric(survey$Q20)
+wilcox.test(survey$Q20, mu = 1)
+```
+
+## Q21
+```{r Q21}
+survey$Q21 = as.numeric(survey$Q21)
+wilcox.test(survey$Q21, mu = 1)
+```
