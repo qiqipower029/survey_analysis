@@ -90,7 +90,7 @@ Q1617.compare %>%
 ## Q18
 ```{r Q18}
 survey$Q18 = as.numeric(survey$Q18)
-wilcox.test(survey$Q10, mu = 1)
+wilcox.test(survey$Q18, mu = 1)
 ```
 
 ## Q19
